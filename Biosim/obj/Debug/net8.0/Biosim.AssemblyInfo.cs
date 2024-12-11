@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Biosim")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d3a825a54e4e98706ee15ffcb0912fbe5237bb96")]
 [assembly: System.Reflection.AssemblyProductAttribute("Biosim")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Biosim")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

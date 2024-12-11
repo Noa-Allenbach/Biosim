@@ -5,23 +5,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using static Biosim.Models.Gene;
+using static Biosim.Models.Node;
 
 namespace Biosim.Models
 {
-    class Genome : List<Gene> { }
+    public class Genome : List<Gene> { }
 
     static class GenomeFunctions
     {
         private static Random random = new Random();
 
-        private static Gene MakeRandomGene()
+        public static Gene MakeRandomGene()
         {
             var gene = new Gene
             {
                 // Cast the byte to the NodeType enum
-                SourceType = (Gene.NodeType)(random.Next(2)),  // Randomly Sensor (0) or Neuron (1)
+                SourceType = (Node.NodeType)(random.Next(2)),  // Randomly Sensor (0) or Neuron (1)
                 SourceNum = (ushort)random.Next(0, 0x7FFF),
-                SinkType = (Gene.NodeType)(random.Next(2)),  // Randomly Sensor (0) or Neuron (1)
+                SinkType = (Node.NodeType)(random.Next(2)),  // Randomly Sensor (0) or Neuron (1)
                 SinkNum = (ushort)random.Next(0, 0x7FFF),
                 Weight = Gene.MakeRandomWeight()
             };
@@ -56,7 +57,7 @@ namespace Biosim.Models
                 };
 
                 // Apply modulo to source and sink numbers based on their types
-                if (conn.SourceType == Gene.NodeType.Neuron)
+                if (conn.SourceType == Node.NodeType.Neuron)
                 {
                     conn.SourceNum %= Parameters.MaxNumberNeurons;
                 }
@@ -66,7 +67,7 @@ namespace Biosim.Models
                     conn.SourceNum %= Parameters.MaxNumberSensors;
                 }
 
-                if (conn.SinkType == Gene.NodeType.Neuron)
+                if (conn.SinkType == Node.NodeType.Neuron)
                 {
                     // Apply modulo for neurons to ensure they are within the valid range
                     conn.SinkNum %= Parameters.MaxNumberNeurons;
@@ -184,12 +185,12 @@ namespace Biosim.Models
             if (chance < 0.2f)
             {
                 // Correct way to apply XOR to an enum type
-                genome[elementIndex].SourceType ^= (Gene.NodeType)(1 << random.Next(0, 7));
+                genome[elementIndex].SourceType ^= (NodeType)(1 << random.Next(0, 7));
 
             }
             else if (chance < 0.4f)
             {
-                genome[elementIndex].SinkType = (Gene.NodeType)((int)genome[elementIndex].SinkType ^ (1 << random.Next(0, 7)));
+                genome[elementIndex].SinkType = (NodeType)((int)genome[elementIndex].SinkType ^ (1 << random.Next(0, 7)));
 
             }
             else if (chance < 0.6f)

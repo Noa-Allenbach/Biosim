@@ -8,17 +8,17 @@ namespace Biosim.Models
 {
     public class Gene
     {
-        public enum NodeType
-        {
-            Sensor,
-            Neuron,
-            Action
-        }
+        //public enum NodeType
+        //{
+        //    Sensor,
+        //    Neuron,
+        //    Action
+        //}
 
         // Connection properties
-        public NodeType SourceType { get; set; }
+        public Node.NodeType SourceType { get; set; }
         public ushort SourceNum { get; set; }
-        public NodeType SinkType { get; set; }
+        public Node.NodeType SinkType { get; set; }
         public ushort SinkNum { get; set; }
         public float Weight { get; set; }
 
@@ -29,9 +29,9 @@ namespace Biosim.Models
         {
             return new Gene
             {
-                SourceType = (NodeType)(random.Next(2)),  // Randomly Sensor (0) or Neuron (1)
+                SourceType = (Node.NodeType)(random.Next(2)),  // Randomly Sensor (0) or Neuron (1)
                 SourceNum = (ushort)random.Next(0, 32767),
-                SinkType = (NodeType)(random.Next(2)),  // Randomly Sensor (0) or Neuron (1)
+                SinkType = (Node.NodeType)(random.Next(2)),  // Randomly Sensor (0) or Neuron (1)
                 SinkNum = (ushort)random.Next(0, 32767),
                 Weight = MakeRandomWeight()
             };

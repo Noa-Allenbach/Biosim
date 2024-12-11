@@ -89,31 +89,25 @@ namespace Biosim.Models
 
             foreach (var gene in connections)
             {
-                if (gene.SourceType == Gene.NodeType.Sensor || gene.SourceType == Gene.NodeType.Neuron)
+                if (nodeValues.ContainsKey(gene.SourceNum))
                 {
-                    float sourceValue = nodeValues.ContainsKey(gene.SourceNum) ? nodeValues[gene.SourceNum] : 0.0f;
+                    float sourceValue = nodeValues[gene.SourceNum];
                     float weightedValue = sourceValue * gene.Weight;
 
-                    // Update sink node values (could be a neuron or an action)
                     if (newValues.ContainsKey(gene.SinkNum))
                     {
                         newValues[gene.SinkNum] += weightedValue;
                     }
                     else
                     {
-                        // If the sink node does not exist in newValues, initialize it
                         newValues[gene.SinkNum] = weightedValue;
                     }
                 }
             }
 
-            // Update node values with new propagated values
             nodeValues = newValues;
         }
 
-        /// <summary>
-        /// Retrieves the outputs from the action nodes.
-        /// </summary>
         public Dictionary<ushort, float> GetOutputs(List<ushort> outputNodes)
         {
             var outputs = new Dictionary<ushort, float>();
@@ -133,4 +127,5 @@ namespace Biosim.Models
             return outputs;
         }
     }
+
 }

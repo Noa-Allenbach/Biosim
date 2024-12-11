@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "BGR44mV0fBE=",
+  "dgSpecHash": "em+aOxxbey4=",
   "success": true,
   "projectFilePath": "C:\\src\\Biosim\\Biosim\\Biosim.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\noa.allenbach\\.nuget\\packages\\mstest.testframework\\3.6.4\\mstest.testframework.3.6.4.nupkg.sha512",
     "C:\\Users\\noa.allenbach\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
   ],
   "logs": []
