@@ -1,0 +1,17 @@
+C:\src\Biosim\Biosim\bin\Debug\net8.0\Biosim.exe
+C:\src\Biosim\Biosim\bin\Debug\net8.0\Biosim.deps.json
+C:\src\Biosim\Biosim\bin\Debug\net8.0\Biosim.runtimeconfig.json
+C:\src\Biosim\Biosim\bin\Debug\net8.0\Biosim.dll
+C:\src\Biosim\Biosim\bin\Debug\net8.0\Biosim.pdb
+C:\src\Biosim\Biosim\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\src\Biosim\Biosim\obj\Debug\net8.0\Biosim.csproj.AssemblyReference.cache
+C:\src\Biosim\Biosim\obj\Debug\net8.0\Biosim.GeneratedMSBuildEditorConfig.editorconfig
+C:\src\Biosim\Biosim\obj\Debug\net8.0\Biosim.AssemblyInfoInputs.cache
+C:\src\Biosim\Biosim\obj\Debug\net8.0\Biosim.AssemblyInfo.cs
+C:\src\Biosim\Biosim\obj\Debug\net8.0\Biosim.csproj.CoreCompileInputs.cache
+C:\src\Biosim\Biosim\obj\Debug\net8.0\Biosim.csproj.Up2Date
+C:\src\Biosim\Biosim\obj\Debug\net8.0\Biosim.dll
+C:\src\Biosim\Biosim\obj\Debug\net8.0\refint\Biosim.dll
+C:\src\Biosim\Biosim\obj\Debug\net8.0\Biosim.pdb
+C:\src\Biosim\Biosim\obj\Debug\net8.0\Biosim.genruntimeconfig.cache
+C:\src\Biosim\Biosim\obj\Debug\net8.0\ref\Biosim.dll

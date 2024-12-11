@@ -1,0 +1,7 @@
+{
+    "PopulationSize": 200,
+    "GridWidth": 150,
+    "GridHeight": 150,
+    "MutationRate": 0.02,
+    "GenomeLength": 32
+}
